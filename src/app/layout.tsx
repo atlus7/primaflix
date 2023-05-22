@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { ProviderWrapper } from "@/redux/provider";
 import Navbar from "@/components/Navbar";
+import Toaster from "@/components/Toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-w-[800px] px-10">
+        <Toaster></Toaster>
         <ProviderWrapper>
           <Navbar></Navbar>
           {children}
